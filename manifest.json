@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "IPA-ify",
+    "version": "1.0",
+  
+    "action": {...},
+    "default_locale": "en",
+    "description": "Make words into IPA to practice reading",
+    "icons": {
+
+    },
+  
+    // Optional
+    "author": ...,
+    "automation": ...,
+    "background": {
+      // Required
+      "service_worker": "background.js",
+      // Optional
+      "type": ...
+    }
+}
