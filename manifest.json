@@ -1,22 +1,32 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "IPA-ify",
     "version": "1.0",
-  
-    "action": {...},
-    "default_locale": "en",
     "description": "Make words into IPA to practice reading",
+    
+    "permissions": [],
+    "host_permissions": [],
+    "background": {
+        "service_worker": "background.js" 
+    },
+
+    "content_scripts": [{
+        "matches": ["http://+/+", "https://*/*"],
+        "js" : ["content-script.js"]
+    }],
+
+
+
     "icons": {
+        "16": "frog-icon.jpg"
 
     },
-  
-    // Optional
-    "author": ...,
-    "automation": ...,
-    "background": {
-      // Required
-      "service_worker": "background.js",
-      // Optional
-      "type": ...
-    }
+
+    "action": {
+        "default_icon": "frog-icon.jpg",
+        "default_popup": "hello.html",
+        "default_title:": "BEEP",
+        "default_popup": "popup.html"
+    }    
+
 }
